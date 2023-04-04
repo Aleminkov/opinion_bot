@@ -66,7 +66,7 @@ async def sql_expens(user_id , value):
         curs.close()
         db.close()
 
-def opinion_sql(user_id):
+async def opinion_sql(user_id):
     try:
         db = sq.connect('opinion.db')
         curs = db.cursor()
