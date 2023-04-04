@@ -9,7 +9,7 @@ async def welcome(message: types.Message):
 
 async def opinion(message: types.Message):
     
-    records = sql.opinion_sql(message.from_user.id)
+    records = await sql.opinion_sql(message.from_user.id)
     
     if(len(records)):
         answer = f"История операций: \n\n"
