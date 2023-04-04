@@ -53,8 +53,9 @@ async def expenses(message: types.Message):
     for word in world_list:
         if word.isnumeric():
             value.append(int(word))
+    
     if len(value) != 0:
-        for i in value
+        for i in value:
             await sql.sql_expens(message.from_user.id, i)
     
         await bot.send_message(message.from_user.id , 'Расход добавлен')
