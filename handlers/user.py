@@ -35,7 +35,7 @@ async def earn(message: types.Message):
         if word.isnumeric():
             value.append(int(word))
     
-    if len(value) >= 1:
+    if len(value) != 0:
         await sql.sql_earn(message.from_user.id, value[0])
 
         await bot.send_message(message.from_user.id , 'Доход добавлен')
@@ -52,7 +52,7 @@ async def expenses(message: types.Message):
     for word in world_list:
         if word.isnumeric():
             value.append(int(word))
-    if len(value) >= 1:
+    if len(value) != 0:
         await sql.sql_expens(message.from_user.id, value[0])
     
         await bot.send_message(message.from_user.id , 'Расход добавлен')
