@@ -1,10 +1,7 @@
 from aiogram import types , executor
 from help_for_bot import dp
 from handlers import user 
-import logging
 from sql import sql
-
-logging.basicConfig(level=logging.INFO)
 
 async def start(_):
     await sql.sql_start()
