@@ -36,7 +36,7 @@ async def earn(message: types.Message):
             value.append(int(word))
     
     if len(value) != 0:
-        for i in value
+        for i in value:
             await sql.sql_earn(message.from_user.id, i)
 
         await bot.send_message(message.from_user.id , 'Доход добавлен')
